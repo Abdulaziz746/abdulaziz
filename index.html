@@ -8,12 +8,17 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* تغيير هنا لضبط المحاذاة */
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* تغيير هنا لضمان ملء الشاشة */
             text-align: center;
             background-color: #f0f0f0;
             margin: 0;
+            padding-top: 20px; /* إضافة مساحة علوية للشعار */
+        }
+        img {
+            max-width: 300px; /* تحديد عرض أقصى للشعار */
+            margin-bottom: 20px; /* مسافة بين الشعار والنص */
         }
         h1 {
             margin-bottom: 20px;
@@ -25,7 +30,7 @@
             gap: 10px;
         }
         .box {
-            width: 80%; /* جعل المربعات تأخذ 80% من عرض الشاشة */
+            width: 80%;
             padding: 15px;
             font-size: 24px;
             font-weight: bold;
@@ -41,13 +46,12 @@
     </style>
 </head>
 <body>
+    <img src="https://www.al-moe.gov.sa/AlMoePortal/PublishingImages/al-iman.png" alt="شعار مستشفى الإيمان العام">
     <h1>اختر القسم الذي تريد زيارته:</h1>
-
     <div class="container">
         <a class="box" href="https://www.installonair.com/#">قسم</a>
         <a class="box" href="https://trollcheck.pages.dev">أمن</a>
         <a class="box" href="https://fortnitedb.com/v2/en">صحي</a>
     </div>
-
 </body>
 </html>
