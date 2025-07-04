@@ -8,53 +8,88 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* لكي تبدأ المحتويات من الأعلى */
+            justify-content: flex-start;
             align-items: center;
-            min-height: 100vh; /* لضمان أن الصفحة تملأ ارتفاع الشاشة بالكامل */
+            min-height: 100vh;
             text-align: center;
-            background-color: #f0f0f0; /* لون خلفية خفيف */
+            background-color: #f0f0f0;
             margin: 0;
-            padding-top: 20px; /* مسافة من أعلى الشاشة لإبعاد الشعار قليلاً عن الحافة */
-            font-family: Arial, sans-serif; /* خط عام وواضح */
+            padding-top: 20px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box; /* للتأكد من أن padding و border لا يزيدان من العرض الكلي */
         }
         img {
-            max-width: 300px; /* تحديد عرض أقصى للشعار لضمان عدم كبره جداً */
+            max-width: 300px; /* تحديد عرض أقصى للشعار */
             height: auto; /* للحفاظ على نسبة أبعاد الصورة */
-            margin-bottom: 30px; /* مسافة بين الشعار والعنوان الرئيسي */
-            border-radius: 8px; /* لإضافة حواف دائرية خفيفة للشعار */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف لإبراز الشعار */
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #333; /* لون العنوان */
-            margin-bottom: 25px; /* مسافة تحت العنوان */
-            font-size: 2.2em; /* حجم أكبر للعنوان */
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2.2em;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px; /* مسافة أكبر بين الصناديق */
-            width: 90%; /* جعل الحاوية تأخذ عرضاً أكبر لتبدو أجمل على الشاشات الكبيرة */
-            max-width: 600px; /* تحديد أقصى عرض للحاوية */
+            gap: 15px;
+            width: 90%;
+            max-width: 600px;
+            padding-bottom: 20px; /* إضافة مسافة سفلية للحاوية */
         }
         .box {
-            width: 100%; /* جعل الصندوق يملأ عرض الحاوية */
-            padding: 18px 25px; /* مساحة داخلية أكبر للصناديق */
-            font-size: 26px; /* حجم خط أكبر داخل الصناديق */
+            width: 100%;
+            padding: 18px 25px;
+            font-size: 26px;
             font-weight: bold;
-            border: 2px solid #007bff; /* لون حدود مميز */
-            border-radius: 12px; /* زوايا دائرية أكثر */
-            background-color: #ffffff; /* خلفية بيضاء للصندوق */
-            color: #007bff; /* لون النص في الصندوق */
-            text-decoration: none; /* إزالة الخط تحت الروابط */
-            transition: all 0.3s ease; /* انتقال ناعم عند التفاعل */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف للصناديق */
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            background-color: #ffffff;
+            color: #007bff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* مهم جداً هنا لكي لا يزيد padding من عرض الـ 100% */
         }
         .box:hover {
-            background-color: #007bff; /* تغيير لون الخلفية عند التحويم */
-            color: #ffffff; /* تغيير لون النص عند التحويم */
-            transform: translateY(-3px); /* تأثير ارتفاع طفيف عند التحويم */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* ظل أوضح عند التحويم */
+            background-color: #007bff;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ----- استعلامات الوسائط (Media Queries) لجعل الصفحة متجاوبة ----- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em; /* تصغير حجم العنوان للشاشات المتوسطة والصغيرة */
+            }
+            .box {
+                font-size: 22px; /* تصغير حجم الخط في الصناديق */
+                padding: 15px 20px; /* تصغير المساحة الداخلية للصناديق */
+            }
+            img {
+                max-width: 250px; /* تصغير حجم الشعار قليلاً على الجوال */
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em; /* تصغير حجم العنوان أكثر للهواتف الصغيرة جداً */
+            }
+            .box {
+                font-size: 20px; /* تصغير حجم الخط في الصناديق أكثر */
+                padding: 12px 15px; /* تصغير المساحة الداخلية أكثر */
+            }
+            img {
+                max-width: 200px; /* تصغير حجم الشعار أكثر */
+                margin-bottom: 20px;
+            }
+            body {
+                padding-top: 15px; /* تقليل المسافة العلوية */
+            }
         }
     </style>
 </head>
