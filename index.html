@@ -16,11 +16,12 @@
             margin: 0;
             padding-top: 20px;
             font-family: Arial, sans-serif;
-            box-sizing: border-box; /* للتأكد من أن padding و border لا يزيدان من العرض الكلي */
+            box-sizing: border-box;
         }
         img {
-            max-width: 300px; /* تحديد عرض أقصى للشعار */
-            height: auto; /* للحفاظ على نسبة أبعاد الصورة */
+            /* زيادة كبيرة في الحد الأقصى للعرض الافتراضي للصورة */
+            max-width: 550px; /* تم زيادة العرض الأقصى بشكل ملحوظ هنا */
+            height: auto; /* للحفاظ على نسبة أبعاد الصورة وعدم تشوهها */
             margin-bottom: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -37,7 +38,7 @@
             gap: 15px;
             width: 90%;
             max-width: 600px;
-            padding-bottom: 20px; /* إضافة مسافة سفلية للحاوية */
+            padding-bottom: 20px;
         }
         .box {
             width: 100%;
@@ -51,7 +52,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box; /* مهم جداً هنا لكي لا يزيد padding من عرض الـ 100% */
+            box-sizing: border-box;
         }
         .box:hover {
             background-color: #007bff;
@@ -63,32 +64,34 @@
         /* ----- استعلامات الوسائط (Media Queries) لجعل الصفحة متجاوبة ----- */
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.8em; /* تصغير حجم العنوان للشاشات المتوسطة والصغيرة */
+                font-size: 1.8em;
             }
             .box {
-                font-size: 22px; /* تصغير حجم الخط في الصناديق */
-                padding: 15px 20px; /* تصغير المساحة الداخلية للصناديق */
+                font-size: 22px;
+                padding: 15px 20px;
             }
             img {
-                max-width: 250px; /* تصغير حجم الشعار قليلاً على الجوال */
+                /* تعديل حجم الشعار للأجهزة اللوحية والهواتف الكبيرة */
+                max-width: 400px; /* زيادة العرض هنا أيضاً */
                 margin-bottom: 25px;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.5em; /* تصغير حجم العنوان أكثر للهواتف الصغيرة جداً */
+                font-size: 1.5em;
             }
             .box {
-                font-size: 20px; /* تصغير حجم الخط في الصناديق أكثر */
-                padding: 12px 15px; /* تصغير المساحة الداخلية أكثر */
+                font-size: 20px;
+                padding: 12px 15px;
             }
             img {
-                max-width: 200px; /* تصغير حجم الشعار أكثر */
+                /* تعديل حجم الشعار للهواتف الصغيرة جداً */
+                max-width: 320px; /* زيادة العرض هنا أيضاً */
                 margin-bottom: 20px;
             }
             body {
-                padding-top: 15px; /* تقليل المسافة العلوية */
+                padding-top: 15px;
             }
         }
     </style>
