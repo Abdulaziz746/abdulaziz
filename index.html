@@ -8,50 +8,65 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* تغيير هنا لضبط المحاذاة */
+            justify-content: flex-start; /* لكي تبدأ المحتويات من الأعلى */
             align-items: center;
-            min-height: 100vh; /* تغيير هنا لضمان ملء الشاشة */
+            min-height: 100vh; /* لضمان أن الصفحة تملأ ارتفاع الشاشة بالكامل */
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #f0f0f0; /* لون خلفية خفيف */
             margin: 0;
-            padding-top: 20px; /* إضافة مساحة علوية للشعار */
+            padding-top: 20px; /* مسافة من أعلى الشاشة لإبعاد الشعار قليلاً عن الحافة */
+            font-family: Arial, sans-serif; /* خط عام وواضح */
         }
         img {
-            max-width: 300px; /* تحديد عرض أقصى للشعار */
-            margin-bottom: 20px; /* مسافة بين الشعار والنص */
+            max-width: 300px; /* تحديد عرض أقصى للشعار لضمان عدم كبره جداً */
+            height: auto; /* للحفاظ على نسبة أبعاد الصورة */
+            margin-bottom: 30px; /* مسافة بين الشعار والعنوان الرئيسي */
+            border-radius: 8px; /* لإضافة حواف دائرية خفيفة للشعار */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف لإبراز الشعار */
         }
         h1 {
-            margin-bottom: 20px;
+            color: #333; /* لون العنوان */
+            margin-bottom: 25px; /* مسافة تحت العنوان */
+            font-size: 2.2em; /* حجم أكبر للعنوان */
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 15px; /* مسافة أكبر بين الصناديق */
+            width: 90%; /* جعل الحاوية تأخذ عرضاً أكبر لتبدو أجمل على الشاشات الكبيرة */
+            max-width: 600px; /* تحديد أقصى عرض للحاوية */
         }
         .box {
-            width: 80%;
-            padding: 15px;
-            font-size: 24px;
+            width: 100%; /* جعل الصندوق يملأ عرض الحاوية */
+            padding: 18px 25px; /* مساحة داخلية أكبر للصناديق */
+            font-size: 26px; /* حجم خط أكبر داخل الصناديق */
             font-weight: bold;
-            border: 2px solid #333;
-            border-radius: 10px;
-            background-color: #fff;
-            transition: background-color 0.3s;
-            text-align: center;
+            border: 2px solid #007bff; /* لون حدود مميز */
+            border-radius: 12px; /* زوايا دائرية أكثر */
+            background-color: #ffffff; /* خلفية بيضاء للصندوق */
+            color: #007bff; /* لون النص في الصندوق */
+            text-decoration: none; /* إزالة الخط تحت الروابط */
+            transition: all 0.3s ease; /* انتقال ناعم عند التفاعل */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف للصناديق */
         }
         .box:hover {
-            background-color: #e0e0e0;
+            background-color: #007bff; /* تغيير لون الخلفية عند التحويم */
+            color: #ffffff; /* تغيير لون النص عند التحويم */
+            transform: translateY(-3px); /* تأثير ارتفاع طفيف عند التحويم */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* ظل أوضح عند التحويم */
         }
     </style>
 </head>
 <body>
-    <img src="https://l.top4top.io/p_3472ybks60.jpeg" alt="شعار مستشفى الإيمان العام">
+    <img src="https://i.postimg.cc/Kcdwz1bv/9-C6-B9551-5535-4700-BC8-B-84924-ED3-D914.jpg" alt="شعار مستشفى الإيمان العام">
     <h1>اختر القسم الذي تريد زيارته:</h1>
+
     <div class="container">
         <a class="box" href="https://www.installonair.com/#">قسم</a>
         <a class="box" href="https://trollcheck.pages.dev">أمن</a>
         <a class="box" href="https://fortnitedb.com/v2/en">صحي</a>
     </div>
+
 </body>
 </html>
